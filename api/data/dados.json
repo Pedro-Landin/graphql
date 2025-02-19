@@ -29,18 +29,36 @@
       "role": 2
     },
     {
-      "id": 5,
-      "nome": "Silvia Souza",
+      "nome": "Lidia",
       "ativo": true,
-      "email": "s@s.com",
-      "role": 2
+      "email": "lidia@example.com",
+      "role": 2,
+      "createdAt": "2020-02-01T00:00:00.000Z",
+      "id": 5
     },
     {
-      "id": 6,
-      "nome": "Marcia Silva",
+      "nome": "Pedro henrique landin",
       "ativo": true,
-      "email": "m@m.com",
-      "role": 2
+      "email": "lidia@example.com",
+      "role": 3,
+      "createdAt": "2020-02-07T00:00:00.000Z",
+      "id": 6
+    },
+    {
+      "nome": "Pedro",
+      "ativo": true,
+      "email": "lidia@example.com",
+      "role": 2,
+      "createdAt": "2020-02-01T00:00:00.000Z",
+      "id": 7
+    },
+    {
+      "nome": "Pedro",
+      "ativo": true,
+      "email": "lidia@example.com",
+      "role": 1,
+      "createdAt": "2020-02-01T00:00:00.000Z",
+      "id": 8
     }
   ],
   "roles": [
