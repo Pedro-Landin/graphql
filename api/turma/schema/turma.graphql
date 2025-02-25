@@ -1,0 +1,53 @@
+const { gql } = require('apollo-server')
+
+const turmaSchema = gql`
+scalar DateTime
+
+  type Turma {
+    id: ID!
+    descricao: String!
+    horario: String
+    vagas: Int
+    inicio: DateTime
+    docente: User!
+    createdAt: DateTime
+  }
+
+   input TurmaInput {
+   descricao: String
+   horario: String
+   vagas: Int
+   inicio: DateTime
+   docente_id: Int
+ }
+
+  type Query {
+    turmas: [Turma]
+    turma(id: ID!): Turma
+  }
+
+  # Mutations CRUD
+  # Todas as mutations devem retornar o objeto criado ou atualizado
+  # O id do objeto é passado como parâmetro para a mutation
+  # O objeto é passado como parâmetro para a mutation
+  # Na mutation devemos colocar as funções que alteram o estado do sistema
+
+   type Mutation {
+    incluiTurma(turma: TurmaInput): Turma!
+    atualizaTurma(id: ID!, turma: TurmaInput): Turma!
+    deletaTurma(id: ID!): RespostaPadrao!
+ }
+  # Interface para as respostas das mutations
+  interface Resposta {
+   mensagem: String!
+ }
+ 
+ # Resposta padrão para as mutations
+ type RespostaPadrao implements Resposta {
+   mensagem: String!
+ }
+
+`
+
+module.exports = turmaSchema
+

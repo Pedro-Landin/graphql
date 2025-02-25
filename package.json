@@ -21,8 +21,10 @@
   "dependencies": {
     "apollo-datasource-rest": "^3.7.0",
     "apollo-server": "^3.13.0",
+    "datasource-sql": "^2.1.0",
     "graphql": "^16.9.0",
     "json-server": "^0.16.1",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "sqlite3": "^5.1.7"
   }
 }
