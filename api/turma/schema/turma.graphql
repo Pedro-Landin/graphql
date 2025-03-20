@@ -10,7 +10,8 @@ scalar DateTime
     vagas: Int
     inicio: DateTime
     docente: User!
-    createdAt: DateTime
+    createdAt: DateTime!
+    matriculas: [Matricula]
   }
 
    input TurmaInput {
