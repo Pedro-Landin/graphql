@@ -20,6 +20,13 @@ const turmaResolvers = {
     turmas: (_, __, { dataSources }) => dataSources.turmasAPI.getTurmas(),
     turma: (_, { id }, { dataSources }) => dataSources.turmasAPI.getTurma(id)
   },
+
+  Turma: {
+    matriculas: (parent, _, { dataSources }) => dataSources.
+    matriculasAPI.getMatriculasPorTurma(parent.id),
+    docente: (parent, _, { dataSources }) => dataSources.usersAPI.
+    getUserById(parent.docente_id)
+  }
 };
 
 module.exports = turmaResolvers

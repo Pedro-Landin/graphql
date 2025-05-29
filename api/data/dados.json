@@ -30,6 +30,14 @@
       "id": 5
     },
     {
+      "nome": "Jairo",
+      "ativo": true,
+      "email": "lidia@example.com",
+      "role": 2,
+      "createdAt": "2020-02-01T00:00:00.000Z",
+      "id": 4
+    },
+    {
       "nome": "Pedro henrique landin",
       "ativo": true,
       "email": "lidia@example.com",

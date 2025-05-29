@@ -11,6 +11,12 @@ scalar DateTime
         status: String!
     }
 
+    type Mutation {
+        matricularEstudante (estudante: ID!, turma: ID!): RespostaPadrao!
+        deletarMatricula (matricula: ID!): RespostaPadrao!
+    }
+
+
 `;
 
 module.exports = matriculaSchema;
