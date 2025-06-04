@@ -14,7 +14,7 @@ const userResolvers = {
     parseLiteral: (ast) => new Date(ast.value),
   }),
   Query: {
-    users: (root, args, { dataSources }) => dataSources.usersAPI.getUsers(),
+    users: (root, args, { dataSources }) => dataSources.usersAPI.getUsers(args),
     user: (root, { id }, { dataSources }) =>
       dataSources.usersAPI.getUserById(id),
   },
@@ -35,7 +35,7 @@ const userResolvers = {
 
   User: {
     matriculas: (parent, _, { dataSources }) =>
-      dataSources.matriculasAPI.getMatriculasPorEstudante(parent.id),
+      dataSources.matriculasAPI.getMatriculasPorEstudante.load(parent.id),
   },
 };
 
